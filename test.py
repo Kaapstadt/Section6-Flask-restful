@@ -5,7 +5,7 @@ cursor = connection.cursor()
 create_table = 'CREATE TABLE users(id int, username text, password text)'
 cursor.execute(create_table)
 
-user = (1,'brianhugo','password')
+user = (1,'caleb','password')
 insert_query = 'INSERT INTO users VALUES(?, ?, ?)'
 cursor.execute(insert_query,user)
 
