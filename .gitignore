@@ -1,0 +1,8 @@
+__pycache__/db.cpython-38.pyc
+__pycache__/item.cpython-38.pyc
+__pycache__/security.cpython-38.pyc
+__pycache__/user.cpython-38.pyc
+restful.code-workspace
+*.pyc
+.vscode
+
