@@ -1,3 +1,6 @@
+
+import os
+
 from flask import Flask
 from flask_restful import  Api
 from flask_jwt import JWT
@@ -10,7 +13,7 @@ from resources.store import Store, StoreList
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db' #find in the root
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db') #find in the root
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False #turns off flask sqlalchamy mofification tracker
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.secret_key = 'brian'
