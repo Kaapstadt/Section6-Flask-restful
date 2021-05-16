@@ -3,7 +3,6 @@ from db import db
 
 db.init_app(app)
 
-#flask decorator
 @app.before_first_request
 def create_tables():
-	db.create_all() # if you don't import store and storelist then sqlalchemy won't create the tables
+    db.create_all()
